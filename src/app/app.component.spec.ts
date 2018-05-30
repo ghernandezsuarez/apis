@@ -1,11 +1,24 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { BrowserModule, By } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { DebugElement } from "@angular/core";
+
+
 import { AppComponent } from './app.component';
+import { CustomMaterialModule } from "./shared/modules/custom-material/custom-material.module";
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      imports: [
+        CustomMaterialModule
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
