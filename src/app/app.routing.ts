@@ -7,8 +7,16 @@ import { Routes, RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 
  export const routes: Routes = [
+
      {
-         path: '',
+         path: ':tokenUDE',
          component: AppComponent
      }
- ]
+ ];
+
+ @NgModule({
+     imports: [ RouterModule.forRoot(routes) ],
+     exports: [ RouterModule ]
+ })
+
+ export class AppRoutingModule {}
