@@ -1,5 +1,6 @@
 <mat-toolbar>
-    <span class="title-center">{{title}}</span>
+    <span class="title-center" i18n>{{title}}</span>
+    <span>{{ currentDate | date: 'long' }} </span>
 </mat-toolbar>
 
 <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="50px">

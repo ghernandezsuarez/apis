@@ -18,6 +18,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   dataPayForm: FormGroup;
 
+  currentDate= new Date();
+
   selectedCountry: string;
 
   dataPay = {
