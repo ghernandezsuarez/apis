@@ -1,4 +1,10 @@
 .title-center {
     flex: 1 1 auto;
     text-align: center;
+    /* height: 600px; */
+}
+
+.two-fields {
+    justify-content: space-around;
+    text-align: center;
 }

@@ -9,10 +9,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { FlexLayoutModule } from '@angular/flex-layout'
 
-import localfr from "@angular/common/locales/fr";
+import locales from "@angular/common/locales/es";
 
 
-registerLocaleData(localfr);
+registerLocaleData(locales);
 
 // Shared Modules
 
@@ -38,7 +38,7 @@ import { registerLocaleData } from '@angular/common';
     CustomMaterialModule
   ],
   providers: [ 
-    { provide: LOCALE_ID, useValue: 'fr'}
+    { provide: LOCALE_ID, useValue: 'es'}
   ],
   bootstrap: [AppComponent]
 })
