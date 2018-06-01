@@ -16,5 +16,7 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "exclude": [ "test.ts" ],
+  "angularCompilerOptions": { "genDir": "./src/i18n" }
 }
