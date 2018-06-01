@@ -3,6 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
+import { COUNTRIES_DATA } from "./countries.data";
+
 @Component({
   selector: 'apis-main',
   templateUrl: './main.component.html',
@@ -28,15 +30,12 @@ export class MainComponent implements OnInit {
 
   countryControl = new FormControl('', [Validators.required]);
 
-  countries = [
-    {code: 'BRA', name: 'Brazil'},
-    {code: 'COL', name: 'Colombia'}
-  ]
+  countries = COUNTRIES_DATA;
 
   locales = [
     { code: 'es', name: 'Español' },
     { code: 'en', name: 'Ingles'}
-  ]
+  ];
 
   constructor(
     private route: ActivatedRoute
