@@ -22,12 +22,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { registerLocaleData } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
+import { PaymetMethodComponent } from './components/paymet-method/paymet-method.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    PaymetMethodComponent
   ],
   imports: [
     BrowserModule,

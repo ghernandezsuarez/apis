@@ -10,7 +10,8 @@ import {
   MatToolbarModule,
   MatCardModule,
   MatSelectModule,
-  MatIconModule
+  MatIconModule,
+  MatTabsModule
 
 } from "@angular/material";
 
@@ -33,6 +34,7 @@ const modules = [
   MatCardModule,
   MatSelectModule,
   MatIconModule,
+  MatTabsModule,
   ObserversModule,
   PlatformModule
 ] 
