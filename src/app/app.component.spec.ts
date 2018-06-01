@@ -102,7 +102,7 @@ afterEach(() => {
 });
 
 
-  xit('should create the app', async( inject([HttpClient, HttpTestingController], ( http: HttpClient, backend: HttpTestingController ) => {
+  it('should create the app', async( inject([HttpClient, HttpTestingController], ( http: HttpClient, backend: HttpTestingController ) => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
@@ -111,13 +111,13 @@ afterEach(() => {
   /**
    * Probar la navegacion por rutas
    */
-  xit(`should navigate to "/"`, fakeAsync(() => {
+  it(`should navigate to "/"`, fakeAsync(() => {
     router.navigate(['']);
     tick();
     expect(location.path()).toBe('/');
   }));
 
-xit(`should receive 'tokenUDE'`, fakeAsync ( ( ) => {
+it(`should receive 'tokenUDE'`, fakeAsync ( ( ) => {
 
   activatedRoute = fixture.debugElement.injector.get(ActivatedRoute) as any;
   activatedRoute.testQueryParamMap =  { 'tokenUDE': 'tokenUDE1234' };
@@ -137,7 +137,7 @@ xit(`should receive 'tokenUDE'`, fakeAsync ( ( ) => {
 /**
  * Valida el campo pais
  */
-xit(`form should be invalid`, async( () => {
+it(`form should be invalid`, async( () => {
 
   component.dataPayForm.controls['country'].setValue('');
 

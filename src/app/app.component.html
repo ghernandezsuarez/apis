@@ -1,27 +1,29 @@
 <mat-toolbar>
-    <span class="title-center">{{title}}</span>
+    <header class="title-center" i18n="app title|Header title app@@appTitle">Data Pay</header>
 </mat-toolbar>
 
-<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="50px">
+<div class="two-fields">
     <form [formGroup]="dataPayForm">
-        <mat-form-field>
-            <mat-select placeholder="Pais" formControlName="country" required>
+
+        <mat-form-field class="A">
+            <mat-select i18n-placeholder placeholder="Country" formControlName="country" required>
                 <mat-option>--</mat-option>
                 <mat-option *ngFor="let country of countries" [value]="country">
                     {{country.name}}
                 </mat-option>
             </mat-select>
-            <mat-error *ngIf="countryControl.hasError('required')">Please choose an country</mat-error>
+            <mat-error *ngIf="countryControl.hasError('required')" i18n>Please choose an country</mat-error>
         </mat-form-field>
 
+
         <mat-form-field>
-            <mat-select placeholder="Locale" formControlName="locale" required>
+            <mat-select i18n-placeholder placeholder="Language" formControlName="locale" required>
                 <mat-option>--</mat-option>
                 <mat-option *ngFor="let locale of locales" [value]="locale">
                     {{locale.name}}
                 </mat-option>
             </mat-select>
-            <mat-error *ngIf="countryControl.hasError('required')">Please choose an country</mat-error>
+            <mat-error *ngIf="countryControl.hasError('required')" i18n>Please choose an language</mat-error>
 
 
         </mat-form-field>

@@ -1,5 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    margin: 20;
+    padding: 2em;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* min-width: 380px;
+    max-width: 1170px; */
+    /* flex-basis: auto; */
+    /* default value */
+    /* flex-grow: 1; */
+}
+
+.container>* {
+    flex: 1 100%;
 }
