@@ -1,11 +1,44 @@
-<div class="docs-primary-header component-page-header">
-    <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
+<mat-toolbar>
+    <span class="title-center">{{title}}</span>
+</mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="50px">
+    <form [formGroup]="dataPayForm">
+        <mat-form-field>
+            <mat-select placeholder="Pais" formControlName="country" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let country of countries" [value]="country">
+                    {{country.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="countryControl.hasError('required')">Please choose an country</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select placeholder="Locale" formControlName="locale" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let locale of locales" [value]="locale">
+                    {{locale.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="countryControl.hasError('required')">Please choose an country</mat-error>
+
+
+        </mat-form-field>
+    </form>
+</div>
+<!-- <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
+
+
+    <div class="docs-primary-header component-page-header">
+        <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
     
   </button>
 
-    <h1 focusOnNavigation>Welcome to apis! </h1>
-</div>
+        <h1 focusOnNavigation>Welcome to apis! </h1>
+    </div>
 
-<mat-checkbox>
-    Subscribe
-</mat-checkbox>
+    <mat-checkbox>
+        Subscribe
+    </mat-checkbox>
+</div> -->

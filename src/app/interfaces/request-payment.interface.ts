@@ -7,7 +7,15 @@ import { PaymentInterface } from './payment.interface';
  */
 export interface RequestPaymentInterface {
 
+    /**
+     * UUID TODO: Se debe generar 
+     */
     id: string;
+
+    /**
+     * La fecha en UTC Type current
+     */
     dateUtc: Date;
+    
     data: PaymentInterface; 
 }

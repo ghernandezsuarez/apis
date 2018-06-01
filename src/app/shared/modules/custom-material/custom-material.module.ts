@@ -1,13 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { MatFormFieldModule}  from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import { MatStepperModule } from "@angular/material/stepper";
+import { 
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatStepperModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatSelectModule,
+  MatIconModule
+
+} from "@angular/material";
+
+
 import { LayoutModule } from "@angular/cdk/layout";
 
+
+import {PlatformModule} from '@angular/cdk/platform';
+import {ObserversModule} from '@angular/cdk/observers';
 
 const modules = [
   CommonModule,
@@ -16,7 +28,13 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatStepperModule
+  MatStepperModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatSelectModule,
+  MatIconModule,
+  ObserversModule,
+  PlatformModule
 ] 
 
 @NgModule({
