@@ -21,11 +21,13 @@ import { CustomMaterialModule } from './shared/modules/custom-material/custom-ma
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { registerLocaleData } from '@angular/common';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
