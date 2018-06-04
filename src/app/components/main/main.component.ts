@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 import { PAYMENTS_DATA } from "../../app.constants";
+import { MatSelectChange } from '@angular/material';
 
 @Component({
   selector: 'apis-main',
@@ -46,6 +47,14 @@ export class MainComponent implements OnInit {
 
 
     
+  }
+
+  onCountryChange( event: MatSelectChange ){
+
+    if(event['isUserInput']){
+      this.selectedCountry = event.source.value;
+}
+
   }
 
 

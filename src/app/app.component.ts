@@ -20,11 +20,11 @@ export class AppComponent  {
   ) {
     this.subscription = this.route.queryParamMap.subscribe(
       (queryParams: any) => {
-        console.log(queryParams);
+        // console.log(queryParams);
 
         this.tokenUDE = queryParams['params']['tokenUDE']
 
-        console.log(this.tokenUDE);
+        // console.log(this.tokenUDE);
 
       }
     )

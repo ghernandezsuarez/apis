@@ -22,7 +22,7 @@ import { LayoutModule } from "@angular/cdk/layout";
 import {PlatformModule} from '@angular/cdk/platform';
 import {ObserversModule} from '@angular/cdk/observers';
 
-const modules = [
+const MAT_MODULES = [
   CommonModule,
   LayoutModule,
   MatCheckboxModule,
@@ -40,7 +40,7 @@ const modules = [
 ] 
 
 @NgModule({
-  imports: modules,
-  exports: modules
+  imports: MAT_MODULES,
+  exports: MAT_MODULES
 })
 export class CustomMaterialModule { }

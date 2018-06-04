@@ -24,6 +24,7 @@ import { registerLocaleData } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
 import { PaymetMethodComponent } from './components/paymet-method/paymet-method.component';
 import { PaymentsTabsPipe } from './pipes/payments-tabs.pipe';
+import { PaymentMethodsComponent } from './components/payment-methods/payment-methods.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { PaymentsTabsPipe } from './pipes/payments-tabs.pipe';
     AppComponent,
     MainComponent,
     PaymetMethodComponent,
-    PaymentsTabsPipe
+    PaymentsTabsPipe,
+    PaymentMethodsComponent
   ],
   imports: [
     BrowserModule,
