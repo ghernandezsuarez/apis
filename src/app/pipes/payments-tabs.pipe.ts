@@ -7,8 +7,25 @@ export class PaymentsTabsPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
 
-    console.log(value);
-    return value.filter( country => country.name === args );
+    let pay_methods:any [];
+    let countrySelected;
+
+   value.filter( country => {
+
+      if(country.code === args) {
+
+        if(!country.pay_methods) {
+
+          return false;
+        } else {
+          countrySelected = country.pay_methods;
+        }
+         
+      }
+
+    } )
+
+    return countrySelected;
   }
 
 }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaymentMethodsComponent } from './payment-methods.component';
+import { PaymentsTabsPipe } from '../../pipes/payments-tabs.pipe';
 
 describe('PaymentMethodsComponent', () => {
   let component: PaymentMethodsComponent;
@@ -8,7 +9,11 @@ describe('PaymentMethodsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaymentMethodsComponent ]
+      declarations: [ 
+        PaymentMethodsComponent,
+        PaymentsTabsPipe
+      ]
+
     })
     .compileComponents();
   }));
