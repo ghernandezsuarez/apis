@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
-import { COUNTRIES_DATA } from "./countries.data";
+import { PAYMENTS_DATA } from "../../app.constants";
 
 @Component({
   selector: 'apis-main',
@@ -12,10 +12,8 @@ import { COUNTRIES_DATA } from "./countries.data";
 })
 export class MainComponent implements OnInit {
 
-  private subscription: Subscription;
 
   title: string = 'DATOS DE PAGO';
-  tokenUDE: string;
 
   dataPayForm: FormGroup;
 
@@ -30,7 +28,7 @@ export class MainComponent implements OnInit {
 
   countryControl = new FormControl('', [Validators.required]);
 
-  countries = COUNTRIES_DATA;
+  countries = PAYMENTS_DATA;
 
   locales = [
     { code: 'es', name: 'Español' },
@@ -38,39 +36,18 @@ export class MainComponent implements OnInit {
   ];
 
   constructor(
-    private route: ActivatedRoute
+    
   ) {
-    this.subscription = this.route.queryParamMap.subscribe(
-      (queryParams: any) => {
-        console.log(queryParams);
-
-        this.tokenUDE = queryParams['params']['tokenUDE']
-
-        console.log(this.tokenUDE);
-
-      }
-    )
   }
 
   ngOnInit(){
 
     this.createForm();
 
-    // this.route.queryParamMap.subscribe((parametros: any) => {
-      
-    //   this.tokenUDE = parametros['params'];
-
-    //   console.log(this.tokenUDE);
-    
-    
-    // } );
-    
-  }
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
 
     
   }
+
 
   createForm(): void {
     this.dataPayForm = new FormGroup({

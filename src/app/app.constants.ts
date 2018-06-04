@@ -1,8 +1,7 @@
-export const COUNTRIES_DATA = [
+export const PAYMENTS_DATA = [
     
     {code: 'ARG', name: 'Argentina'},
-    {code: 'BRA', 
-    name: 'Brazil',
+    {code: 'BRA', name: 'Brasil',
     pay_methods: [
         { code: 'CCard', name:'Credit Card' },
         { code: 'PrePaid', name:'Pre Paid' },
@@ -16,3 +15,5 @@ export const COUNTRIES_DATA = [
     {code: 'ECU', name: 'Ecuador'}
 
 ]
+
+

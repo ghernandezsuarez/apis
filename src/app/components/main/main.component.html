@@ -5,10 +5,10 @@
 <div class="two-fields">
     <form [formGroup]="dataPayForm">
 
-        <mat-form-field class="A">
-            <mat-select i18n-placeholder placeholder="Country" formControlName="country" required>
+        <mat-form-field>
+            <mat-select i18n-placeholder placeholder="Country" [(ngModel)]="selectedCountry" name="country" formControlName="country" required>
                 <mat-option>--</mat-option>
-                <mat-option *ngFor="let country of countries" [value]="country">
+                <mat-option *ngFor="let country of countries" [value]="country.code" (onSelectionChange)="onCountryChange($event)">
                     {{country.name}}
                 </mat-option>
             </mat-select>
@@ -32,7 +32,7 @@
 
 <div>Dato : {{ country }}</div>
 
-<apis-paymet-method [country]="country"></apis-paymet-method>
+<apis-paymet-method [country]="selectedCountry"></apis-paymet-method>
 
 
 <!-- <div fxLayout="column" fxLayoutAlign="space-evenly stretch">

@@ -23,13 +23,15 @@ import { AppRoutingModule } from './app.routing';
 import { registerLocaleData } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
 import { PaymetMethodComponent } from './components/paymet-method/paymet-method.component';
+import { PaymentsTabsPipe } from './pipes/payments-tabs.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    PaymetMethodComponent
+    PaymetMethodComponent,
+    PaymentsTabsPipe
   ],
   imports: [
     BrowserModule,
