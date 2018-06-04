@@ -21,11 +21,17 @@ import { CustomMaterialModule } from './shared/modules/custom-material/custom-ma
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { registerLocaleData } from '@angular/common';
+import { MainComponent } from './components/main/main.component';
+import { PaymentsTabsPipe } from './pipes/payments-tabs.pipe';
+import { PaymentMethodsComponent } from './components/payment-methods/payment-methods.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    PaymentsTabsPipe,
+    PaymentMethodsComponent
   ],
   imports: [
     BrowserModule,

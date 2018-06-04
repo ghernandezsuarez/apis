@@ -1,0 +1,50 @@
+<mat-toolbar>
+    <header class="title-center" i18n="app title|Header title app@@appTitle">Data Pay</header>
+</mat-toolbar>
+
+<div class="two-fields">
+    <form [formGroup]="dataPayForm">
+
+        <mat-form-field>
+            <mat-select i18n-placeholder placeholder="Country" [(ngModel)]="selectedCountry" name="country" formControlName="country" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let country of countries" [value]="country.code" (onSelectionChange)="onCountryChange($event)">
+                    {{country.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="countryControl.hasError('required')" i18n>Please choose an country</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-select i18n-placeholder placeholder="Language" formControlName="locale" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let locale of locales" [value]="locale">
+                    {{locale.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="countryControl.hasError('required')" i18n>Please choose an language</mat-error>
+
+
+        </mat-form-field>
+    </form>
+</div>
+
+<apis-payment-methods [country]="selectedCountry"></apis-payment-methods>
+
+
+<!-- <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
+
+
+    <div class="docs-primary-header component-page-header">
+        <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
+    
+  </button>
+
+        <h1 focusOnNavigation>Welcome to apis! </h1>
+    </div>
+
+    <mat-checkbox>
+        Subscribe
+    </mat-checkbox>
+</div> -->
